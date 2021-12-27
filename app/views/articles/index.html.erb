@@ -8,6 +8,7 @@
     <% unless article.archived? %>
       <li>
         <%= link_to(article.title, article) %>
+        <i>(<%= article.comments.public_count %> Comments) </i>
       </li>
     <% end %>
   <% end %>
