@@ -4,3 +4,10 @@
 
 <%= link_to "Edit", edit_article_path(@article), class: 'nigga' %>
 <%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<h2>Add a comment</h2>
+
+<%= render 'comments/form' %>
+
+<h2> <%= @article.comments.public_count%> Comments</h2>
+<%= render @article.comments %>
