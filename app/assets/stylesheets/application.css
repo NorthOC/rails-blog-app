@@ -13,21 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+ :root {
+   --clr-primary01: #C179B9;
+   --clr-primary02: #A42CD6;
+   --clr-secondary01: #502274;
+   --clr-secondary02: #2F242C;
+   --clr-neutral: #f1e3e3;
+ }
+
  *, *::before, *::after {
    box-sizing: border-box;
  }
+
  body{
    margin: 0;
+   margin-top: 2rem;
+   background-color: var(--clr-neutral);
+   font-family: Ubuntu, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ h1, p{
+   margin: 0;
+ }
+
+ h1{
+  text-align: center;
  }
  nav{
    width: 100%;
-   text-align: center;
    position: fixed;
-   border-bottom: 1px solid salmon;
+   text-align: center;
+   display: flex;
    top: 0%;
+   background: linear-gradient(150deg, var(--clr-primary02), var(--clr-secondary01));
+   border-radius: 0 0 2px 2px;
+
+ }
+ header{
+   text-align: center;
  }
  .navlink {
-   display: block;
    margin: auto;
+   display: block;
+   text-decoration: none;
+   color: var(--clr-neutral);
+   padding: 0.4rem;
+   font-weight: 700;
+   transition: 500ms;
    width: 100%;
+ }
+ .navlink:hover{
+   transition: 500ms;
+   border-radius: 0 0 5px 5px;
+   background-color: rgba(0, 0, 0, 0.425);
+ }
+ .intro-title{
+   position: relative;
+   display: inline-block;
+   color: var(--clr-neutral);
+   background-color: var(--clr-secondary02) ;
+   border-radius: 4px;
+   padding: 1.5rem 2rem 2rem 2rem;
+   font-weight: 100;
+ }
+ .intro-title::after{
+  display: block;
+  position: absolute;
+  font-style: normal;
+  content: 'by Denis Lisunov';
+  background-color: var(--clr-primary02);
+  color: var(--clr-neutral);
+  border-radius: 3px;
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  margin-left: 11.2rem;
+  width: 40%;
+  font-weight: 500;
  }
