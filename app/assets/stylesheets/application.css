@@ -15,11 +15,14 @@
  */
 
  :root {
-   --clr-primary01: #C179B9;
-   --clr-primary02: #A42CD6;
-   --clr-secondary01: #502274;
-   --clr-secondary02: #2F242C;
-   --clr-neutral: #f1e3e3;
+   --clr-primary01: #50fa7b;
+   --clr-primary02: #282a36;
+   --clr-secondary01: #030e12;
+   --clr-secondary02: 	#6272a4;
+   --clr-secondary03: #383a59;
+   --clr-neutral: #f8f8f2;
+   --pink: #ff79c6;
+   --red: #ff5555;
  }
 
  *, *::before, *::after {
@@ -29,7 +32,7 @@
  body{
    margin: 0;
    margin-top: 2rem;
-   background-color: var(--clr-neutral);
+   background-color: var(--clr-primary02);
    font-family: Ubuntu, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  }
 
@@ -43,12 +46,11 @@
  nav{
    width: 100%;
    position: fixed;
-   text-align: center;
-   display: flex;
    top: 0%;
-   background: linear-gradient(150deg, var(--clr-primary02), var(--clr-secondary01));
-   border-radius: 0 0 2px 2px;
-
+   background: var(--clr-primary02);
+   -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+   z-index: 9999999;
  }
  header{
    text-align: center;
@@ -56,38 +58,104 @@
  .navlink {
    margin: auto;
    display: block;
+   float: right;
    text-decoration: none;
    color: var(--clr-neutral);
-   padding: 0.4rem;
+   margin: 0.4rem 0.7rem;
    font-weight: 700;
-   transition: 500ms;
-   width: 100%;
+   border-bottom: 1px solid transparent;
+   transition: border-bottom 800ms ease;
+   z-index: 9999999;
  }
  .navlink:hover{
    transition: 500ms;
-   border-radius: 0 0 5px 5px;
-   background-color: rgba(0, 0, 0, 0.425);
+   color: var(--pink);
+   border-bottom: 1px solid var(--pink);
+ }
+ .new-article-nav{
+   text-decoration: none;
+   color: var(--clr-primary02);
+   font-size: 1.5rem;
+   background-color: var(--clr-primary01);
+   margin: 10px;
+   padding: 5px 15px;
  }
  .intro-title{
    position: relative;
    display: inline-block;
    color: var(--clr-neutral);
-   background-color: var(--clr-secondary02) ;
+   background-color: var(--clr-secondary01) ;
    border-radius: 4px;
-   padding: 1.5rem 2rem 2rem 2rem;
+   margin-bottom: 1.5rem;
+   padding: 1.5rem 2rem 1.7rem 2rem;
    font-weight: 100;
+   -webkit-box-shadow: 5px 5px 0px 0px #062413, 10px 10px 0px 0px #0d4b31, 15px 15px 0px 0px #178043, 20px 20px 0px 0px #1aa04d, 23px 20px 12px -11px rgba(0,0,0,0); 
+   box-shadow: 5px 5px 0px 0px #062413, 10px 10px 0px 0px #0d4b31, 15px 15px 0px 0px #178043, 20px 20px 0px 0px #1aa04d, 23px 20px 12px -11px rgba(0,0,0,0);
  }
  .intro-title::after{
   display: block;
   position: absolute;
   font-style: normal;
   content: 'by Denis Lisunov';
-  background-color: var(--clr-primary02);
-  color: var(--clr-neutral);
+  background-color: var(--clr-primary01);
+  color: var(--clr-secondary01);
   border-radius: 3px;
   padding: 0.2rem 0;
   font-size: 0.8rem;
-  margin-left: 11.2rem;
-  width: 40%;
+  margin-left: 6rem;
+  width: 50%;
   font-weight: 500;
+  transform: skew(0deg, 2deg);
+  -webkit-box-shadow: 3px 3px 7px 1px #000000; 
+  box-shadow: 3px 3px 7px 1px #000000;
  }
+
+ .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content:center;
+ }
+
+ .list{
+    list-style-type:none;
+    padding: 0;
+ }
+.container {
+  margin: 15px;
+}
+
+.card {
+  width: 15rem;
+  height: 8rem;
+  max-width: 25rem;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-secondary02);
+  border-radius: 15px 15px 20px 20px;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: var(--clr-neutral);
+  box-shadow: 1px 1px 7px 1px #000000;
+}
+
+.card > h5 {
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 1.5rem;
+  background-color: var(--clr-secondary03);
+  font-weight: 500;
+}
+.card-desc {
+  margin: 0;
+  padding: 5px 15px;
+  text-align: right;
+  font-size: 0.8rem;
+  background-color: var(--clr-secondary03);
+  border-radius: 0 0 15px 15px;
+}
+.float-left{
+  float: left;
+}

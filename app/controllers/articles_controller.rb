@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
+    @articles = @articles.reverse
   end
 
   def show

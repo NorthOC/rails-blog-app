@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NorthOC blog site</title>
+    <title>Trip Records - Tales from drug trips</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,9 +12,10 @@
 
   <body>
   <nav>
-  <a href='/' class='navlink'>Home</a>
-  <a href='/' class='navlink'>About</a>
   <a href='/' class='navlink'>Contact</a>
+  <a href='/' class='navlink'>About</a>
+  <a href='/' class='navlink'>Home</a>
+  <%= link_to "+", new_article_path, class: 'new-article-nav'%>
   </nav>
     <%= yield %>
   </body>
