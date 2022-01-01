@@ -29,9 +29,14 @@
    box-sizing: border-box;
  }
 
+ html{
+   height: 100%;
+ }
  body{
    margin: 0;
-   margin-top: 2rem;
+   padding-top: 4rem;
+   min-height: 100vh;
+   height: 100%;
    background-color: var(--clr-primary02);
    font-family: Ubuntu, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  }
@@ -47,6 +52,7 @@
    width: 100%;
    position: fixed;
    top: 0%;
+   height: 3rem;
    background: var(--clr-primary02);
    -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
     box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
@@ -56,13 +62,12 @@
    text-align: center;
  }
  .navlink {
-   margin: auto;
-   display: block;
    float: right;
    text-decoration: none;
    color: var(--clr-neutral);
-   margin: 0.4rem 0.7rem;
-   font-weight: 700;
+   margin: 0.6rem 0.7rem;
+   font-weight: 300;
+   font-size: 1.4rem;
    border-bottom: 1px solid transparent;
    transition: border-bottom 800ms ease;
    z-index: 9999999;
@@ -75,7 +80,7 @@
  .new-article-nav{
    text-decoration: none;
    color: var(--clr-primary02);
-   font-size: 1.5rem;
+   font-size: 2rem;
    background-color: var(--clr-primary01);
    margin: 10px;
    padding: 5px 15px;
@@ -87,7 +92,7 @@
    background-color: var(--clr-secondary01) ;
    border-radius: 4px;
    margin-bottom: 1.5rem;
-   padding: 1.5rem 2rem 1.7rem 2rem;
+   padding: 1.5rem 3.5rem 1.7rem 3.5rem;
    font-weight: 100;
    -webkit-box-shadow: 5px 5px 0px 0px #062413, 10px 10px 0px 0px #0d4b31, 15px 15px 0px 0px #178043, 20px 20px 0px 0px #1aa04d, 23px 20px 12px -11px rgba(0,0,0,0); 
    box-shadow: 5px 5px 0px 0px #062413, 10px 10px 0px 0px #0d4b31, 15px 15px 0px 0px #178043, 20px 20px 0px 0px #1aa04d, 23px 20px 12px -11px rgba(0,0,0,0);
@@ -122,14 +127,15 @@
     padding: 0;
  }
 .container {
-  margin: 15px;
+  margin: 15px auto;
+  width: 80%;
 }
 
 .card {
-  width: 15rem;
-  height: 8rem;
-  max-width: 25rem;
-  flex: 1 1 100%;
+  min-width: 15rem;
+  min-height: 10rem;
+  max-width: 30rem;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   background-color: var(--clr-secondary02);
@@ -142,8 +148,7 @@
 
 .card > h5 {
   margin: 0;
-  padding-left: 10px;
-  padding-top: 5px;
+  padding: 10px;
   font-size: 1.5rem;
   background-color: var(--clr-secondary03);
   font-weight: 500;
@@ -155,7 +160,20 @@
   font-size: 0.8rem;
   background-color: var(--clr-secondary03);
   border-radius: 0 0 15px 15px;
+  border-top: 1px solid rgba(255, 255, 0, 0.377);
 }
 .float-left{
   float: left;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+}
+.footer-cont{
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 5rem;
 }

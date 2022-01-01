@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <div class='footer-cont'>
   <nav>
   <a href='/' class='navlink'>Contact</a>
   <a href='/' class='navlink'>About</a>
@@ -18,5 +19,7 @@
   <%= link_to "+", new_article_path, class: 'new-article-nav'%>
   </nav>
     <%= yield %>
+  <footer>Copyright 2022 @ Denis Lisunov</footer>
+  </div>
   </body>
 </html>

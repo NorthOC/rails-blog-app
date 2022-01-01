@@ -1,5 +1,5 @@
 <header>
-<h1 class='intro-title'>Trip Records</h1>
+<h1 class='intro-title'>Trip Hub</h1>
 </header>
 
 <div class='container'>
@@ -9,7 +9,10 @@
         <%= link_to(article, class: 'card weed') do%>
         <h5><%=article.title%></h5>
         <div class='card-desc'>
-        <i class='float-left'><%= article.created_at.strftime("%Y-%m-%d %H:%M")%></i>
+        <i class='float-left'><%= article.created_at.strftime("%Y-%m-%d %H:%M")%>
+        <% if article.created_at != article.updated_at%>
+        <%= '*'%>
+        <%end%></i>
         <i><%= article.comments.public_count %> Comments </i>
         </div>
         <% end %>
