@@ -1,3 +1,21 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.contact-image{
+  filter: invert(100%);
+  width: 100%;
+  max-width: 400px;
+}
+.contact-link{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact-header{
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
