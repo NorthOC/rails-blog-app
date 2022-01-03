@@ -1,13 +1,22 @@
-<h1><%= @article.title %></h1>
+<header class="article-header">
+  <h1 class='article-title'><%= @article.title %></h1>
+</header>
 
-<section><%= @article.body%></section>
-
-<%= link_to "Edit", edit_article_path(@article), class: 'nigga' %>
-<%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-<h2>Add a comment</h2>
-
-<%= render 'comments/form' %>
-
-<h2> <%= @article.comments.public_count%> Comments</h2>
-<%= render @article.comments %>
+<div class="article-container">
+  <section class="article-section text-align-justify">
+  <% text = @article.body.split(/[\r\n\r\n]+/) %>
+  <% text.each do |par|%>
+  <p><%= par %></p>
+  <% end %>
+  </section>
+  
+  <%= link_to "Edit", edit_article_path(@article), class: 'nigga' %>
+  <%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  <h2>Add a comment</h2>
+  
+  <%= render 'comments/form' %>
+  
+  <h2> <%= @article.comments.public_count%> Comments</h2>
+  <%= render @article.comments %>
+</div>

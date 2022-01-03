@@ -45,7 +45,7 @@
    margin: 0;
  }
 
- h1{
+ header{
   text-align: center;
  }
  nav{
@@ -57,9 +57,6 @@
    -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
     box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
    z-index: 9999999;
- }
- header{
-   text-align: center;
  }
  .navlink {
    float: right;
@@ -101,7 +98,7 @@
   display: block;
   position: absolute;
   font-style: normal;
-  content: 'by Denis Lisunov';
+  content: 'by NorthOC';
   background-color: var(--clr-primary01);
   color: var(--clr-secondary01);
   border-radius: 3px;
@@ -176,4 +173,11 @@ footer {
   min-height: 100%;
   position: relative;
   padding-bottom: 5rem;
+}
+
+.text-align-center{
+  text-align: center;
+}
+.text-align-justify{
+  text-align: justify;
 }

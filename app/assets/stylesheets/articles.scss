@@ -5,3 +5,63 @@
 .weed{
   background-image: url(weed.jpg);
 }
+
+.article-section{
+  line-height: 1.5rem;
+  color: white;
+  text-indent: 2rem;
+}
+
+.article-section > p{
+padding: 0.8rem 0 0.2rem 0;
+}
+.article-title{
+  color: var(--clr-primary01);
+  margin: 0 auto;
+
+  &::after{
+    display: block;
+    content: '';
+    width: 70%;
+    margin: 1rem auto;
+    height: 2px;
+    background-color: var(--clr-primary01);
+  }
+
+}
+
+.article-subtitle{
+  color: var(--pink);
+}
+
+.article-header{
+  margin: auto 1rem;
+}
+
+.article-container {
+  margin: 15px auto;
+  width: 60%;
+}
+
+@media only screen and (max-width: 950px) {
+  .article-container {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .article-title::after{
+    display: none;
+  }
+}
+.accent{
+  letter-spacing: 0.3rem;
+  color: var(--clr-neutral);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.accent-lite{
+  letter-spacing: 0.3rem;
+  color: var(--clr-neutral);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
