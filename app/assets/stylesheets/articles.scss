@@ -127,3 +127,16 @@ label{
   color: red;
   padding-left: 10px;
 }
+
+.edit-destroy{
+  text-decoration: none;
+  color: var(--pink);
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 250ms ease;
+}
+
+.edit-destroy:hover{
+  transition: 250ms;
+  border-bottom: 1px solid var(--pink);
+}
