@@ -1,3 +1,57 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.comment-section{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commenter{
+  font-size: 1.1rem;
+  font-weight: 350;
+  color: var(--pink);
+  display: initial;
+  margin-left: 20px;
+  position: relative;
+  top: 10px;
+  background-color: var(--clr-primary02);
+  padding: 0px 10px;
+}
+
+.comment-body{
+  font-size: 1rem;
+  border: 1px solid rgb(56, 56, 56);
+  color: var(--clr-neutral);
+  padding: 25px 50px;
+}
+
+.comment-delete{
+  text-decoration: none;
+  color: rgb(240, 72, 72);
+  font-weight: 900;
+  font-size: 1rem;
+  float: right;
+  padding-left: 10px;
+  padding-right: 9px;
+  margin-right: 1px;
+  background-color: var(--clr-primary02);
+  position: relative;
+  top: 10px;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .comment-body, .commenter{
+    font-size: 0.9rem;
+  }
+  .comment-delete{
+    top: 8px;
+  }
+}

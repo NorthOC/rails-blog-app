@@ -1,15 +1,17 @@
 <% if !comment.commenter.nil? %>
   <% unless comment.archived? %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
+  <div class="comment">
+  
+    <div class="flex-row">
+      <p class='commenter'>
+        <%= comment.commenter %>
+      </p>
+      <%= link_to '●', [comment.article, comment], class: 'comment-delete', method: :delete, data: {confirm: "Are you sure?" } %>
+    </div>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-
-  <%= link_to 'Delete comment', [comment.article, comment], method: :delete, data: {confirm: "Are you sure?" } %>
+    <p class='comment-body'>
+      <%= comment.body %>
+    </p>
+  </div>
   <% end %>
 <% end %>

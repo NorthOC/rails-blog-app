@@ -10,13 +10,13 @@
   <% end %>
   </section>
   
-  <div class='text-align-right'>
+  <div class='text-align-right end-line'>
     <%= link_to "Edit",edit_article_path(@article),class: 'edit-destroy'%><%= link_to "Delete",article_path(@article), class: 'edit-destroy', method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
-  <h2> <%= @article.comments.public_count%> Comments</h2>
+  <div class='comment-section'>
   <%= render @article.comments %>
-  
+  </div>
   <h2>Add a comment</h2>
   
   <%= render 'comments/form' %>
