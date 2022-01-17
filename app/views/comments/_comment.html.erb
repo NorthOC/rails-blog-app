@@ -1,5 +1,4 @@
 <% if !comment.commenter.nil? %>
-  <% unless comment.archived? %>
   <div class="comment">
   
     <div class="flex-row">
@@ -13,5 +12,4 @@
       <%= comment.body %>
     </p>
   </div>
-  <% end %>
 <% end %>
