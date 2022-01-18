@@ -11,5 +11,6 @@
     <p class='comment-body'>
       <%= comment.body %>
     </p>
+    <p class='comment-time'><%= comment.created_at.strftime("%H:%M | %Y-%m-%d")%></p>
   </div>
 <% end %>

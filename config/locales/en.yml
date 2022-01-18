@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      comment:            "Comment"
+    attributes:
+      comment:
+        commenter:         "Your name"
+        body:              "Your"

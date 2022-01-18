@@ -1,12 +1,18 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
-    <%= form.text_field :commenter, placeholder: 'Name' , id: "comment-name"%>
+    <%= form.text_field :commenter, placeholder: 'Name' , class: 'field', maxlength: '25'%>
   </p>
   <p>
-    <%= form.text_area :body, placeholder: 'Comment' %>
+    <%= form.text_area :body, placeholder: 'Comment', class: 'field comment-text', maxlength: '3000'%>
   </p>
-
+  <% if flash.any? %>
+  <% flash.each do |type, msg| %>
+  <div class='error-msg'>
+  <%= msg %>
+  </div>
+  <% end %>
+  <% end %>
   <p>
-    <%= form.submit %>
+    <%= form.submit class: 'button'%>
   </p>
 <% end %>
