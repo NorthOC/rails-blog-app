@@ -1,24 +1,7 @@
-# README
+# Blog App - fullstack app with Ruby on Rails!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! This was built following Rails getting started guide. Here I learned how to use MVC (Model View Controller) architecture, how to create RESTful controller methods, how database migrations work and SQL queries. I also used a different database (SQLite) for development and production (PostgreSQL) since Heroku does not support SQLite.
 
-Things you may want to cover:
+I also integrated new ways of styling using CSS pseudo classes ::before ::after.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Give it a spin: [Click Here!](trip-hub-tales.herokuapp.com/) (It may take a bit to load due to the server not being active when there is no traffic)
