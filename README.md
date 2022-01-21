@@ -4,4 +4,6 @@ Hi! This was built following Rails getting started guide. Here I learned how to 
 
 I also integrated new ways of styling using CSS pseudo classes ::before ::after.
 
+### IF YOU WANT TO MESS AROUND AND CREATE/EDIT OR DELETE POSTS/COMMENTS, the username and pasword is 'cobalt' (without the quotes).
+
 Give it a spin: [Click here!](https://trip-hub-tales.herokuapp.com/) (It may take a bit to load due to the server not being active when there is no traffic)
